@@ -184,18 +184,32 @@ html {
   box-sizing: inherit; }
 
 .main-top {
-  display: block; }
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-left: 46.91392%; }
   .main-top::after {
     clear: both;
     content: "";
     display: table; }
+  .main-top:last-child {
+    margin-right: 0; }
 
 .main-bottom {
-  display: block; }
+  display: block;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-left: 46.91392%; }
   .main-bottom::after {
     clear: both;
     content: "";
     display: table; }
+  .main-bottom:last-child {
+    margin-right: 0; }
 
 .container {
   max-width: 1200px;

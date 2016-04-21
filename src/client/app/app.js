@@ -5,9 +5,9 @@
     angular
         .module('app', [
            'app.home',
-           'app.login',
-           'app.hub',
-           'app.profile'
+            'app.nav-footer',
+            'app.auth',
+            'app.member-hub',
+            'app.member-profile'
         ]);
-
 })();

@@ -3,28 +3,32 @@
     'use strict';
 
     angular
-        .module('app.auth')
+        .module('app.member-hub')
         .config(config);
 
         config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
         function config ($stateProvider, $urlRouterProvider, $httpProvider) {
+            var vm = this;
 
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
-                .state('login', {
-                    url: '/login',
-                    templateUrl: '/app/auth/views/login.html',
-                    controller: 'AuthCtrl',
-                    controllerAs:  'vm'
-                })
-                .state('register', {
-                  url: '/register',
-                  templateUrl: '/app/auth/views/register.html',
-                  controller: 'AuthCtrl',
-                  controllerAs: 'vm'
+                .state('hub', {
+                    url: '/hub/member/:id',
+                    views: {
+                      '': {
+                        templateUrl: '/app/member-hub/views/main.html',
+                          controller: 'HubCtrl',
+                          controllerAs:  'vm'
+                      },
+                      'chat@hub': {
+                        templateUrl: '/app/member-hub/views/chat.html'
+                      }
+                    },
+                    css: '/styles/css/hub.css'
                 });
+
 
             $httpProvider
                 .interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {
@@ -46,4 +50,5 @@
                 };
             }]);
         }
+
 })();

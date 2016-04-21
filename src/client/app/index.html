@@ -6,15 +6,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-css/1.0.7/angular-css.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.js"></script>
     <link rel="stylesheet" href="/styles/css/main.css">
     <link rel="stylesheet" ng-href="{{css}}">
   </head>
   <body>
+
+    <navbar-view></navbar-view>
     <div ui-view>
-
       <!-- Partials here -->
-
     </div>
+    <!--<footer-view></footer-view>-->
+
+    <!-- Custom scripts -->
+
     <script src="/app/app.js" charset="utf-8"></script>
+    <script src="/app/nav-footer/nav-footer.module.js" charset="utf-8"></script>
+    <script src="/app/nav-footer/nav.directive.js" charset="utf-8"></script>
+    <script src="/app/nav-footer/footer.directive.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.module.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.service.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.controller.js" charset="utf-8"></script>
+    <script src="/app/dataservice/member.factory.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.module.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.routes.js" charset="utf-8"></script>
+    <script src="/app/auth/auth.controller.js" charset="utf-8"></script>
+    <script src="/app/home/home.module.js" charset="utf-8"></script>
+    <script src="/app/home/home.routes.js" charset="utf-8"></script>
+    <script src="/app/home/home.controller.js" charset="utf-8"></script>
+    <script src="/app/member-hub/hub.module.js" charset="utf-8"></script>
+    <script src="/app/member-hub/hub.routes.js" charset="utf-8"></script>
+    <script src="/app/member-hub/hub.controller.js" charset="utf-8"></script>
+    <script src="/app/member-profile/profile.module.js" charset="utf-8"></script>
+    <script src="/app/member-profile/profile.routes.js" charset="utf-8"></script>
+    <script src="/app/member-profile/profile.controller.js" charset="utf-8"></script>
   </body>
 </html>

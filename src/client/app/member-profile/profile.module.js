@@ -3,10 +3,9 @@
     'use strict';
 
     angular
-        .module('app.auth', [
+        .module('app.member-profile', [
             'ui.router',
             'door3.css',
             'ngStorage'
         ]);
-
 })();

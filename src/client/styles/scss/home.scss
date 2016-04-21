@@ -2,11 +2,15 @@
 @import "neat";
 
 .main-top {
-  @include row()
+  @include row();
+  @include span-columns(12);
+  @include shift(5.5);
 
 }
 
 .main-bottom {
-  @include row()
+  @include row();
+  @include span-columns(12);
+  @include shift(5.5);
 
 }

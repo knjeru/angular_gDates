@@ -1,0 +1,12 @@
+@import "bourbon";
+@import "neat";
+
+.main-top {
+  @include row()
+
+}
+
+.main-bottom {
+  @include row()
+
+}

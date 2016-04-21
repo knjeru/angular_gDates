@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.main-top {
+  display: block; }
+  .main-top::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.main-bottom {
+  display: block; }
+  .main-bottom::after {
+    clear: both;
+    content: "";
+    display: table; }

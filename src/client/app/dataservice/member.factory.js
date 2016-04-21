@@ -18,7 +18,6 @@
     };
 
     memberApi.getOne = function(id) {
-      console.log(id);
       return $http.get(urlBase + '/' + id);
     };
 

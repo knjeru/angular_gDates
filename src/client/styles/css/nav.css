@@ -101,7 +101,9 @@ html {
   .centered-navigation .logo img {
     margin-bottom: -0.66667em;
     max-height: 2em;
-    opacity: 0.6; }
+    opacity: 0.6;
+    width: 38px;
+    height: 32px; }
   .centered-navigation li.more.nav-link {
     padding-right: 0; }
     @media screen and (min-width: 53.75em) {

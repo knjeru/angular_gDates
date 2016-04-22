@@ -6,6 +6,7 @@
         .module('app.home', [
             'ui.router',
             'door3.css',
-            'ngStorage'
+            'ngStorage',
+            'ngAnimate'
         ]);
 })();

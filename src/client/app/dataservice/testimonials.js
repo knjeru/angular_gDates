@@ -48,7 +48,7 @@
                    "imageUrl": "http://static.eharmony.com/assets/success/couples/thumbs/2513-1366144414.jpg"
                },
                {
-                   "author": "",
+                   "author": "Bobby and Whitney",
                    "text": "I was a huge believer in the phrase \"Everything happens for a reason\" " +
                    "before gDates, and now I'm living proof.",
                    "imageUrl": "http://static.eharmony.com/assets/success/couples/thumbs/2525-1366930406.jpg"

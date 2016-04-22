@@ -1,3 +1,9 @@
-<div>
-  testimonials slider
-</div>
+<section class="testimonials">
+  <aside class="half">
+    <img ng-src="{{vm.testimonials.imageUrl}}"/>
+  </aside>
+  <aside class="half">
+    <p class="body">{{vm.testimonials.text}}</p>
+    <p class="body">from: {{vm.testimonials.author}}</p>
+  </aside>
+</section>

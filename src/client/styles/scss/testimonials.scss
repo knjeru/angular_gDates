@@ -1,0 +1,29 @@
+@import "bourbon";
+@import "neat";
+
+@import './home';
+
+.testimonials {
+
+  @include span-columns(12);
+
+  margin-top: 5px;
+
+  padding: 15px;
+  border-radius: 15px;
+
+  .body {
+    @include row();
+  }
+
+  .half {
+    @include span-columns(5);
+  }
+
+  img {
+    border-radius: 40%;
+    @include shift(8);
+  }
+
+}
+

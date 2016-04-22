@@ -1,16 +1,29 @@
 @import "bourbon";
 @import "neat";
 
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .main-top {
+  position: relative;
   @include row();
   @include span-columns(12);
-  @include shift(5.5);
 
+  height: 425px;
+  background-image: url("http://www.argento.co.uk/Images/newsimage/VAL16_expressionists_couple_RGB.jpg");
+  background-repeat: no-repeat;
+  background-position: 30% 27%;
+
+  a {
+    @include centerer;
+  }
 }
 
 .main-bottom {
   @include row();
   @include span-columns(12);
-  @include shift(5.5);
-
 }

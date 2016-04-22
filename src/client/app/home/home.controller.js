@@ -16,5 +16,4 @@
                     vm.testmonials = data;
                 });
         }
-
 })();

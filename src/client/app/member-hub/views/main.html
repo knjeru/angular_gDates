@@ -1,6 +1,13 @@
 <section>
-  <section class="main-top">
-    <p>Home Component</p>
-  </section>
-  <section ui-view="testimonials" class="main-bottom"></section>
+  <aside>
+    <article ng-repeat="member in vm.members">
+      <a ui-sref="hub.selected({slug: member.slug})">
+        <member-item></member-item>
+      </a>
+    </article>
+    <button type="button" ng-click="vm.pagination('more')">More Members</button>
+  </aside>
+  <aside class="hero-aside">
+    <div ui-view autoscroll class="selected"></div>
+  </aside>
 </section>

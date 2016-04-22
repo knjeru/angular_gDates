@@ -1,0 +1,35 @@
+@import "bourbon";
+@import "neat";
+
+@import './hub';
+
+.member-select {
+  padding: 40px;
+  width: 90%;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px #b0b0b0;
+  background-color: #e5e5e5;
+}
+
+#top {
+  @include row();
+  @include shift(4);
+}
+
+#bottom {
+  @include row();
+}
+
+img {
+  box-shadow: 5px 5px 5px #b0b0b0;
+  border-radius: 50%;
+  width: 50%;
+}
+
+.loading {
+  @include shift(4);
+
+  img {
+    width: 40%;
+  }
+}

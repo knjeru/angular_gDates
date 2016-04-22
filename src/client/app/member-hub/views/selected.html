@@ -1,0 +1,19 @@
+<section>
+    <span class="loading" ng-show="vm.loading"><img ng-src="https://3dwarehouse.sketchup.com/img/progress_animation.gif"/></span>
+    <section ng-hide="vm.loading" class="member-select">
+        <article id="top">
+            <img ng-src="{{vm.member.avatar}}">
+            <p>{{vm.member.names.firstName | capitalize}} {{vm.member.names.lastName | capitalize}}</p>
+        </article>
+        <article id="bottom">
+            <p><strong>Bio: </strong>{{vm.member.description}}</p>
+            <p>
+                <strong>Gender: </strong>
+                <span ng-show="vm.member.gender === 0 || vm.member.gender > 2">Humanoid</span>
+                <span ng-show="vm.member.gender === 1">Male</span>
+                <span ng-show="vm.member.gender === 2">Female</span>
+            </p>
+            <p><strong>Popularity: </strong>{{vm.member._matches.length}}</p>
+        </article>
+    </section>
+</section>

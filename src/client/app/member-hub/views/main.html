@@ -1,7 +1,11 @@
 <section>
-  <section class="main-top">
-    <member-item ng-repeat="member in vm.members"></member-item>
+  <aside>
+    <a ui-sref="hub.selected({ id: member._id})">
+      <member-item ng-repeat="member in vm.members"></member-item>
+    </a>
     <button type="button" ng-click="vm.pagination('more')">More Members</button>
-  </section>
-  <section ui-view="testimonials" class="main-bottom"></section>
+  </aside>
+  <aside>
+    <section ui-view></section>
+  </aside>
 </section>

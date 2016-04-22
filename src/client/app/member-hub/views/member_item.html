@@ -1,5 +1,16 @@
 <section class="member-card">
-    <p>{{member.names.firstName}} {{member.names.lastName}}</p>
-    <p></p>
-
+    <article class="half">
+        <img ng-src="{{member.avatar}}">
+        <p>{{member.names.firstName | capitalize}} {{member.names.lastName | capitalize}}</p>
+    </article>
+    <article class="half-wide">
+        <p><strong>Bio: </strong>{{member.description}}</p>
+        <p>
+            <strong>Gender: </strong>
+            <span ng-show="member.gender === 0 || member.gender > 2">Humanoid</span>
+            <span ng-show="member.gender === 1">Male</span>
+            <span ng-show="member.gender === 2">Female</span>
+        </p>
+        <p><strong>Popularity: </strong>{{member._matches.length}}</p>
+    </article>
 </section>

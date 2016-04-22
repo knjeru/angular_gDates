@@ -11,10 +11,9 @@
     function HubCtrl (memberApiService) {
         var vm = this;
         vm.members = [];
-        vm.offset = 0;
+        vm.offset = 1;
 
         vm.pagination = function (input) {
-            console.log(++vm.offset);
             if (input === 'more') {
                 vm.offset = vm.offset + 5;
             } else if (input === 'back') {
@@ -25,10 +24,10 @@
                 .success(function(data) {
                     data.data.map(function(el) {
                         if (el.active === true && el.names.firstName !== "String") {
+                            var updatedEl = el.names.firstName.substring(0,1)
                             vm.members.push(el);
                         }
                     });
-                    console.log(vm.members);
                 });
         };
 

@@ -18,6 +18,10 @@
         return $http.get(urlBase + '?limit=5' + '&offset=' + offset);
       },
 
+      getAllNoOffset: function () {
+        return $http.get(urlBase);
+      },
+
       getOne: function(id) {
         return $http.get(urlBase + '/' + id);
       },

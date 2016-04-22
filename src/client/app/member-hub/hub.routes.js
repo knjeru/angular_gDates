@@ -22,7 +22,7 @@
                 css: '/styles/css/hub.css'
             })
             .state('hub.selected', {
-                url: '/selected/:id',
+                url: '/selected/:slug',
                 templateUrl: 'app/member-hub/views/selected.html',
                 controller: 'ProfileCtrl',
                 controllerAs: 'vm',

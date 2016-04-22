@@ -1,7 +1,7 @@
 <section>
   <aside>
     <article ng-repeat="member in vm.members">
-      <a ui-sref="hub.selected({id: member._id})">
+      <a ui-sref="hub.selected({slug: member.slug})">
         <member-item></member-item>
       </a>
     </article>

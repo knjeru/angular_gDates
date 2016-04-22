@@ -14,7 +14,8 @@
 
         memberApiService.getOne(id)
             .success(function(data) {
-                vm.member = data.data;
+                 vm.member = data.data;
+                console.log('members indiv', vm.member);
             });
     }
 })();

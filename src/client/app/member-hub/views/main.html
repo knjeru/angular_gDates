@@ -1,11 +1,13 @@
 <section>
   <aside>
-    <a ui-sref="hub.selected({ id: member._id})">
-      <member-item ng-repeat="member in vm.members"></member-item>
-    </a>
+    <article ng-repeat="member in vm.members">
+      <a ui-sref="hub.selected({id: member._id})">
+        <member-item></member-item>
+      </a>
+    </article>
     <button type="button" ng-click="vm.pagination('more')">More Members</button>
   </aside>
   <aside>
-    <section ui-view></section>
+    <div ui-view autoscroll class="selected"></div>
   </aside>
 </section>

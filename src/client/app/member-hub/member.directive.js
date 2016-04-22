@@ -5,9 +5,7 @@
     angular
         .module('app.member-hub')
         .directive('memberItem', memberItem);
-
-    memberItem.$inject = [];
-
+    
     function memberItem() {
         return {
             restrict: 'E',

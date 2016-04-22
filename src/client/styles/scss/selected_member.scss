@@ -1,0 +1,18 @@
+@import "bourbon";
+@import "neat";
+
+@import './hub';
+
+.member-select {
+  padding: 25px;
+  border-radius: 20%;
+  box-shadow: 5px 5px 5px #b0b0b0;
+}
+
+.half {
+  @include span-columns(2);
+}
+
+.half-wide {
+  @include span-columns(10);
+}

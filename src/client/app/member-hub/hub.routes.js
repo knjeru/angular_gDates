@@ -15,18 +15,18 @@
 
         $stateProvider
             .state('hub', {
-                url: '/hub/members',
+                url: '/hub',
                 templateUrl: '/app/member-hub/views/main.html',
                 controller: 'HubCtrl',
                 controllerAs:  'vm',
                 css: '/styles/css/hub.css'
             })
             .state('hub.selected', {
-                url: '/:id',
+                url: '/selected/:id',
                 templateUrl: 'app/member-hub/views/selected.html',
                 controller: 'ProfileCtrl',
                 controllerAs: 'vm',
-                css: '/style/css/selected.css'
+                css: '/styles/css/selected_member.css'
             })
             .state('hub.chat', {
                 url: '/:id/chat',

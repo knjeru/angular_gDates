@@ -1,0 +1,16 @@
+<section class="member-select">
+    <article class="half">
+        <img ng-src="{{vm.member.avatar}}">
+        <p>{{vm.member.names.firstName | capitalize}} {{vm.member.names.lastName | capitalize}}</p>
+    </article>
+    <article class="half-wide">
+        <p><strong>Bio: </strong>{{vm.member.description}}</p>
+        <p>
+            <strong>Gender: </strong>
+            <span ng-show="vm.member.gender === 0 || vm.member.gender > 2">Humanoid</span>
+            <span ng-show="vm.member.gender === 1">Male</span>
+            <span ng-show="vm.member.gender === 2">Female</span>
+        </p>
+        <p><strong>Popularity: </strong>{{vm.member._matches.length}}</p>
+    </article>
+</section>

@@ -24,7 +24,6 @@
                 .success(function(data) {
                     data.data.map(function(el) {
                         if (el.active === true && el.names.firstName !== "String") {
-                            var updatedEl = el.names.firstName.substring(0,1)
                             vm.members.push(el);
                         }
                     });

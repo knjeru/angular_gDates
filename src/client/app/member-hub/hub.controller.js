@@ -9,18 +9,37 @@
     HubCtrl.$inject = ['memberApiService'];
 
     function HubCtrl (memberApiService) {
-        console.log('her in this ctrl');
         var vm = this;
         vm.members = [];
+        vm.offset = 0;
 
-        memberApiService.getAll()
+        vm.pagination = function (input) {
+            console.log(++vm.offset);
+            if (input === 'more') {
+                vm.offset = vm.offset + 5;
+            } else if (input === 'back') {
+                vm.offset = vm.offset - 5;
+            }
+
+            memberApiService.getAll(vm.offset)
+                .success(function(data) {
+                    data.data.map(function(el) {
+                        if (el.active === true && el.names.firstName !== "String") {
+                            vm.members.push(el);
+                        }
+                    });
+                    console.log(vm.members);
+                });
+        };
+
+        memberApiService.getAll(vm.offset)
             .success(function(data) {
-                console.log(data);
-                data.map(function(el) {
-                    if (el.active === true) {
+                data.data.map(function(el) {
+                    if (el.active === true && el.names.firstName !== "String") {
                         vm.members.push(el);
                     }
-                })
+                });
+                console.log(vm.members);
             });
     }
 })();

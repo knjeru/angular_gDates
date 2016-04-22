@@ -1,6 +1,7 @@
 <section>
   <section class="main-top">
-    <p>Home Component</p>
+    <member-item ng-repeat="member in vm.members"></member-item>
+    <button type="button" ng-click="vm.pagination('more')">More Members</button>
   </section>
   <section ui-view="testimonials" class="main-bottom"></section>
 </section>
